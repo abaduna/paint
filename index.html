@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paint</title>
+    <style>
+        body{
+            background: rgb(34,193,195);
+            box-sizing: border-box;
+            background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+        #main{
+            width: 800px;
+            height: auto;
+            margin: auto;
+            border: 2px solid black;
+            box-sizing: border-box;
+            align-content: center;
+            justify-content: center
+        }
+           
+        
+        canvas{
+            border: 2px solid black;
+            box-sizing: border-box;
+           
+            margin-left: 275px;
+            
+        }
+        .button {
+  background-color: #da4109; /* Green */
+
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section >
+            <h1>Mi paint</h1>
+            <div id="main">
+            Color de linea    <input type="color" onchange="color(this)">
+            Color de linea    <input type="range" onchange="ancho(this)" max="200" min="1" value="1">
+            <span id="valor">0</span><br>
+            <button type="button" class="button" onclick="limpiar()">Borrar</button>
+            </div>
+        </section>
+        <canvas id="canvas" width="800" height="500">
+
+        </canvas>  
+    </div>
+    <script  src="main.js"></script>
+</body>
+</html>
